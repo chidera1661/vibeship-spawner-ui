@@ -330,7 +330,7 @@ export function buildMissionControlHydrationSnapshot(
 			.filter((task) => task.status === 'failed' || task.status === 'cancelled')
 			.map((task) => task.title),
 		pendingTasks: boardEntry.tasks
-			.filter((task) => !task.status || task.status === 'queued' || task.status === 'running')
+			.filter((task) => task.status === 'queued' || task.status === 'running')
 			.map((task) => task.title)
 	};
 }
